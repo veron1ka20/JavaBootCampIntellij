@@ -7,9 +7,13 @@ public class TryCatchFinallySample {
 	
 	public static void main(String[] args) {
 		//1 - Create an instance of TryCatchFinallySample and call catchMeIfYouCan()
-		
+		TryCatchFinallySample obj = new TryCatchFinallySample();
+		obj.catchMeIfYouCan();
+
 	}
-	
+
+	}
+
 	public void catchMeIfYouCan()
 	{
 		//As long as we try to print it, it'd work and print null.		
