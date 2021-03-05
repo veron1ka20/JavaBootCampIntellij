@@ -3,9 +3,10 @@ package sef.module17.activity;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+import activity.EmployeeJDBC;
 import junit.framework.TestCase;
 
-public class EmployeeJDBCTest extends TestCase {
+public class EmployeeJDBCTest extends EmployeeJDBC {
 
 	EmployeeJDBC emp;
 	
@@ -22,6 +23,8 @@ public class EmployeeJDBCTest extends TestCase {
 
 	public void testFindEmployeeById_MatchFound() {
 		//complete the code here
+		Employee em = emp.findEmployeeById(5);
+		assertEquals("Edgar", em.getFirstName());
 	}
 
 	public void testFindEmployeeById_NoMatchFound() {
