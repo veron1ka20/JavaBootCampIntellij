@@ -1,38 +1,69 @@
 package FirstActivity;
 
 public class Employee extends Person {
-    private String title;
+    private String jobTitle;
     private String company;
     private String name;
-    private String age;
+    private int age;
+    private double salary;
 
-    public Employee(){
-        super();
-        System.out.println("My name is " + name + " and I am " + age + " years old " + " and I work as " + title + " in " + company); }
+    public Employee() {
+        this.name = "Unknown";
+        this.age = 0;
+        this.jobTitle = "Unknown";
+        this.company = "Unknown";
+        this.salary = 0;
+    }
 
-    public String getTitle() {
-        return title;
+    public String getJobTitle() {
+        return jobTitle;
     }
-    public void setTitle(String title) {
-        this.title = title;
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
+
     public String getCompany() {
         return company;
     }
+
     public void setCompany(String company) {
         this.company = company;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public String getAge() {
+
+    public int getAge() {
         return age;
     }
-    public void setAge(String age) {
+
+    public void setAge(int age) {
         this.age = age;
     }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public void Employee() {
+        System.out.println("My name is " + name + " and I am " + age + " years old " + " and I work as " + jobTitle + " in " + company); }
+
+    public static void main(String[] args) {
+        Employee m = new Employee();
+        m.setName("Miriam Brown");
+        m.setAge(31);
+        m.setJobTitle("Assistant");
+        m.setSalary(3000);
+        m.setCompany("White House");
+        m.Employee();
+    }
 }
